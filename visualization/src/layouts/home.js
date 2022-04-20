@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 // import Overview from '@/views/home/overview';
+import Operation from '@/views/home/operation';
 
 export default {
   size: [3840, 2160], // 设计稿尺寸，非实际尺寸
@@ -10,5 +11,11 @@ export default {
     height: 100,
     z: 0,
     use: Header
+  }, {
+    x: 100,
+    y: 100,
+    width: 800,
+    height: 500,
+    use: Operation
   }]
 }

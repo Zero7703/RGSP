@@ -1,24 +1,18 @@
-# smart-park
+## 如皋软件园智慧园区
 
-## Project setup
-```
-npm install
-```
+> 大屏前端项目
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[接口](./apis.md)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 启动
 
-### Lints and fixes files
-```
-npm run lint
-```
+```sh
+# 安装依赖
+yarn 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 启动调试
+yarn serve
+
+# 构建
+yarn build
+```
