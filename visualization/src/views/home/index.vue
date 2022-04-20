@@ -1,0 +1,36 @@
+<template>
+  <div class="views-container views-home">
+    <component
+      class="component-item"
+      v-for="(item, index) in componentList"
+      :is="item.use"
+      :style="item.inlineStyles"
+      :key="index"
+    />
+  </div>
+</template>
+
+<script>
+import computeLayout from '@/utils/layout';
+import Card from '@/components/card';
+import homeLayout from '@/layouts/home';
+
+export default {
+  components: {
+    Card
+  },
+  data () {
+    return {
+      componentList: []
+    }
+  },
+  created () {
+    this.componentList = computeLayout(homeLayout);
+    console.log(`====`, this.componentList)
+  }
+}
+</script>
+
+<style lang="less" scoped>
+
+</style>
