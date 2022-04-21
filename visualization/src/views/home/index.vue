@@ -32,5 +32,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+  .views-home {
+    background-image: url('./bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .component-item {
+    // border: 1px saddlebrown dashed;
+  }
 </style>

@@ -15,9 +15,6 @@
           <span class="count">
             {{item.value}}
           </span>
-          <span class="suffix">
-            {{item.suffix}}
-          </span>
         </div>
         <div class="label">{{item.label}}</div>
       </div>
@@ -27,6 +24,8 @@
 
 <script>
 import areaImg from './area.png';
+import operaImg from './yunying.png';
+import staffImg from './staff.png';
 
 export default {
   data () {
@@ -43,12 +42,12 @@ export default {
         label: '运营时长',
         value: 0,
         suffix: '年',
-        img: areaImg
+        img: operaImg
       }, {
         label: '工作人员',
         value: 0,
         suffix: '人',
-        img: areaImg
+        img: staffImg
       }],
     }
   }
@@ -75,13 +74,11 @@ export default {
         }
       }
       .count {
+        font-size: 50.2px;
         font-size: var(--font-size-large);
-      }
-      .suffix {
-        font-size: var(--font-size-nromal);
+        color: var(--color-highlight);
       }
       .label {
-        color: var(--color-highlight);
         font-size: var(--font-size-nromal);
       }
     }
