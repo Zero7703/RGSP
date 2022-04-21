@@ -33,6 +33,7 @@
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
+        <rg.version>1.0.0</rg.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -197,6 +198,12 @@
                 <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-common</artifactId>
                 <version>${ruoyi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rg.thridpart</groupId>
+                <artifactId>rg-thirdpart-service</artifactId>
+                <version>${rg.version}</version>
             </dependency>
 
         </dependencies>
