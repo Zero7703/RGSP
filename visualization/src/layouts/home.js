@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 // import Overview from '@/views/home/overview';
-import Operation from '@/views/home/operation';
+// import Operation from '@/views/home/operation';
+import Consume from '@/views/home/consume';
 
 export default {
   size: [3840, 2160], // 设计稿尺寸，非实际尺寸
@@ -16,6 +17,6 @@ export default {
     y: 100,
     width: 800,
     height: 500,
-    use: Operation
+    use: Consume
   }]
 }

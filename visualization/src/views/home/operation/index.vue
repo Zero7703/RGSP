@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     getOptions () {
+      const baseFontSize = this.globalGetChartFontSize();
       const category = this.occupancyStatistics.map(d => d.label);
       return {
         tooltip: {},
@@ -58,7 +59,7 @@ export default {
           },
           axisLabel: {
             color: 'white',
-            fontSize: 15
+            fontSize: baseFontSize * 1.2
           }
         },
         yAxis: {
@@ -68,7 +69,7 @@ export default {
           {
             name: '入驻',
             type: 'bar',
-            barWidth: 10,
+            barWidth: baseFontSize,
             data: this.occupancyStatistics.map(d => {
               return {
                 value: d.value,
@@ -82,14 +83,15 @@ export default {
               show: true,
               position: 'top',
               offset: [0, -10],
-              color: 'white'
+              color: 'white',
+              fontSize: baseFontSize * 1.2
             },
             markPoint: {
               data: this.occupancyStatistics.map((d, i) => {
                 return {
                   coord: [category[i], d.value],
                   symbol: 'circle',
-                  symbolSize: 15,
+                  symbolSize: baseFontSize * 1.5,
                   itemStyle: {
                     color: 'rgb(120,190,203)'
                   }
