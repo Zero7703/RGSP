@@ -64,7 +64,7 @@ public class PmsParkService extends BaseService{
         String code  =  resultJson.getString("code");
         if(!REQUEST_OK.equals(code)){
         }else{
-            pageData = JSONObject.parseObject(resultJson.getString("data"),new TypeReference<PageData<PmsCrossRecordsInfo>>(){});
+            pageData = JSONObject.parseObject(resultJson.getString("data"), new TypeReference<PageData<PmsCrossRecordsInfo>>(){});
         }
         return pageData;
     }
