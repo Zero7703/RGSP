@@ -45,7 +45,7 @@ export default {
   }, {
     x: 894,
     y: 1392,
-    width: 914,
+    width: 980,
     height: 2160 - bottom - 1392,
     use: Parking
   }, {
