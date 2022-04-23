@@ -1,21 +1,21 @@
 :root {
   /* 主标题大小 */
-  --font-size-header: 2rem;
+  --font-size-header: 84px;
   /* 副标题(卡片标题)大小 */
-  --font-size-card-title: 1.5rem;
+  --font-size-card-title: 38px;
   /* 大号文本 */
-  --font-size-large: 1.3rem;
+  --font-size-large: 50.2px;
   /* 中号文本 */
   --font-size-medium: 1.2rem;
   /* 正常文本 */
-  --font-size-nromal: 1rem;
+  --font-size-nromal: 28px;
 
   --color-font: white;
 
   /* 主色调 */
   --color-primary: white;
   /* 高亮色 */
-  --color-highlight: rgb(120,190,203);
+  --color-highlight: #4DEED9;
 
   /* 卡片背景色 */
   --background-card: rgb(17,33,46);
