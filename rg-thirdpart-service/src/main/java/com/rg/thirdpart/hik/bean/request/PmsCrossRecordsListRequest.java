@@ -14,8 +14,6 @@ import lombok.Setter;
  * @date 2022/4/21 14:22
  */
 @ApiModel(value = "停车过车记录查询",description = "描述")
-@Getter
-@Setter
 public class PmsCrossRecordsListRequest extends PageQuery {
 
     /**
@@ -51,34 +49,34 @@ public class PmsCrossRecordsListRequest extends PageQuery {
     @ApiModelProperty(value="进出场标识\n"
         + "0-进场\n"
         + "1-出场",allowableValues = "0,1")
-    private int vehicleOut;
+    private Integer vehicleOut;
 
     @ApiModelProperty(value="车辆类型\n"
         + "0：其他车\n"
         + "1：小型车\n"
         + "2：大型车\n"
         + "3：摩托车",allowableValues = "0,1,2,3")
-    private int vehicleType;
+    private Integer vehicleType;
 
     @ApiModelProperty(value="放行结果\n"
         + "0-未放行\n"
         + "1-正常放行\n"
         + "2-离线放行",allowableValues = "0,1,2")
-    private int releaseResult;
+    private Integer releaseResult;
 
     @ApiModelProperty(value="放行方式\n"
         + "10-未开闸\n"
         + "11-自动开闸\n"
         + "12-人工/人工开闸\n"
         + "13-遥控器开闸",allowableValues = "10,11,12,13")
-    private int releaseWay;
+    private Integer releaseWay;
 
     @ApiModelProperty(value="放行原因\n"
         + "100-固定车自动放行\n"
         + "101-临时车自动放行\n"
         + "102-预约车自动放行\n"
         + "103-一户多车自动放行",allowableValues = "100,101,102,103")
-    private int releaseReason;
+    private Integer releaseReason;
 
     @ApiModelProperty(value="车辆分类\n"
         + "9-黑名单\n"
@@ -89,7 +87,99 @@ public class PmsCrossRecordsListRequest extends PageQuery {
     private String carCategory;
 
 
+    public String getParkSyscode() {
+        return parkSyscode;
+    }
 
+    public void setParkSyscode(String parkSyscode) {
+        this.parkSyscode = parkSyscode;
+    }
 
+    public String getEntranceSyscode() {
+        return entranceSyscode;
+    }
 
+    public void setEntranceSyscode(String entranceSyscode) {
+        this.entranceSyscode = entranceSyscode;
+    }
+
+    public String getPlateNo() {
+        return plateNo;
+    }
+
+    public void setPlateNo(String plateNo) {
+        this.plateNo = plateNo;
+    }
+
+    public String getCardNo() {
+        return cardNo;
+    }
+
+    public void setCardNo(String cardNo) {
+        this.cardNo = cardNo;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public Integer getVehicleOut() {
+        return vehicleOut;
+    }
+
+    public void setVehicleOut(Integer vehicleOut) {
+        this.vehicleOut = vehicleOut;
+    }
+
+    public Integer getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(Integer vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public Integer getReleaseResult() {
+        return releaseResult;
+    }
+
+    public void setReleaseResult(Integer releaseResult) {
+        this.releaseResult = releaseResult;
+    }
+
+    public Integer getReleaseWay() {
+        return releaseWay;
+    }
+
+    public void setReleaseWay(Integer releaseWay) {
+        this.releaseWay = releaseWay;
+    }
+
+    public Integer getReleaseReason() {
+        return releaseReason;
+    }
+
+    public void setReleaseReason(Integer releaseReason) {
+        this.releaseReason = releaseReason;
+    }
+
+    public String getCarCategory() {
+        return carCategory;
+    }
+
+    public void setCarCategory(String carCategory) {
+        this.carCategory = carCategory;
+    }
 }
