@@ -66,21 +66,21 @@ public class PmsParkInfoController
     }
 
 
-    @ApiOperation(value = "查询过车记录", httpMethod = "POST", response = String.class, produces = "application/json")
-    @RequestMapping(value = "/getCrossRecordsInfo", method = RequestMethod.POST, produces = "application/json")
-    public AjaxResult getCrossRecordsInfo( @RequestBody @Validated PmsCrossRecordsListRequest pmsCrossRecordsListRequest ) {
-
-        try {
-            PageData<PmsCrossRecordsInfo> infoList = pmsParkService.getPmsCrossRecordslist(pmsCrossRecordsListRequest);
-            AjaxResult rep = AjaxResult.success(infoList);
-            return rep;
-        } catch (Exception e) {
-            e.printStackTrace();
-            AjaxResult rep = AjaxResult.error("失败");
-            return rep;
-        }
-
-    }
+//    @ApiOperation(value = "查询过车记录", httpMethod = "POST", response = String.class, produces = "application/json")
+//    @RequestMapping(value = "/getCrossRecordsInfo", method = RequestMethod.POST, produces = "application/json")
+//    public AjaxResult getCrossRecordsInfo( @RequestBody @Validated PmsCrossRecordsListRequest pmsCrossRecordsListRequest ) {
+//
+//        try {
+//            PageData<PmsCrossRecordsInfo> infoList = pmsParkService.getPmsCrossRecordslist(pmsCrossRecordsListRequest);
+//            AjaxResult rep = AjaxResult.success(infoList);
+//            return rep;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            AjaxResult rep = AjaxResult.error("失败");
+//            return rep;
+//        }
+//
+//    }
 
 
 }
