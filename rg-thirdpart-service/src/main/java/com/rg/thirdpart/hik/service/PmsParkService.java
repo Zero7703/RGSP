@@ -2,6 +2,7 @@ package com.rg.thirdpart.hik.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.hikvision.artemis.sdk.ArtemisHttpUtil;
 import com.rg.thirdpart.hik.bean.PageData;
@@ -10,6 +11,7 @@ import com.rg.thirdpart.hik.bean.PmsParkRemainInfo;
 import com.rg.thirdpart.hik.bean.request.ParkRemainInfoRequest;
 import com.rg.thirdpart.hik.bean.request.PmsCrossRecordsListRequest;
 import com.rg.thirdpart.hik.config.RunnerConfig;
+import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +30,9 @@ public class PmsParkService extends BaseService{
      * @param parkRemainInfoRequest
      * @return
      */
-    public PmsParkRemainInfo getPmsParkRemainInfo(ParkRemainInfoRequest parkRemainInfoRequest) {
+    public List<PmsParkRemainInfo> getPmsParkRemainInfo(ParkRemainInfoRequest parkRemainInfoRequest) {
         PmsParkRemainInfo pmsParkRemainInfo = new PmsParkRemainInfo();
+        List<PmsParkRemainInfo> list = Lists.newArrayList();
         Map<String, String> path = Maps.newHashMap();
         path.put(RunnerConfig.getProtocol(), ParkRemainInfoRequest.URI);
         String resultJsonStr = ArtemisHttpUtil
@@ -38,9 +41,9 @@ public class PmsParkService extends BaseService{
         String code  =  resultJson.getString("code");
         if(!REQUEST_OK.equals(code)){
         }else{
-            pmsParkRemainInfo = JSONObject.parseObject(resultJson.getString("data"),new TypeReference<PmsParkRemainInfo>(){});
+            list = JSONObject.parseObject(resultJson.getString("data"),new TypeReference<List<PmsParkRemainInfo>>(){});
         }
-        return pmsParkRemainInfo;
+        return list;
     }
 
 
@@ -61,7 +64,7 @@ public class PmsParkService extends BaseService{
         String code  =  resultJson.getString("code");
         if(!REQUEST_OK.equals(code)){
         }else{
-            pageData = JSONObject.parseObject(resultJson.getString("data"),new TypeReference<PageData<PmsCrossRecordsInfo>>(){});
+            pageData = JSONObject.parseObject(resultJson.getString("data"), new TypeReference<PageData<PmsCrossRecordsInfo>>(){});
         }
         return pageData;
     }

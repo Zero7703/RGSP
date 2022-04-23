@@ -4,7 +4,6 @@ import com.rg.thirdpart.hik.bean.PageQuery;
 import com.rg.thirdpart.hik.config.RunnerConfig;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.awt.print.Pageable;
 import lombok.Getter;
 import lombok.Setter;
 

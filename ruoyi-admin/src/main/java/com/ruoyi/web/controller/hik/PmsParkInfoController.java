@@ -1,7 +1,10 @@
 package com.ruoyi.web.controller.hik;
 
+import com.rg.thirdpart.hik.bean.PageData;
+import com.rg.thirdpart.hik.bean.PmsCrossRecordsInfo;
 import com.rg.thirdpart.hik.bean.PmsParkRemainInfo;
 import com.rg.thirdpart.hik.bean.request.ParkRemainInfoRequest;
+import com.rg.thirdpart.hik.bean.request.PmsCrossRecordsListRequest;
 import com.rg.thirdpart.hik.service.PmsParkService;
 import com.ruoyi.common.config.RuoYiConfig;
 import com.ruoyi.common.constant.Constants;
@@ -51,8 +54,25 @@ public class PmsParkInfoController
     public AjaxResult getPmsParkRemainInfo( @RequestBody @Validated ParkRemainInfoRequest parkRemainInfoRequest ) {
 
         try {
-            PmsParkRemainInfo  info = pmsParkService.getPmsParkRemainInfo(parkRemainInfoRequest);
-            AjaxResult rep = AjaxResult.success(info);
+            List<PmsParkRemainInfo>  infoList = pmsParkService.getPmsParkRemainInfo(parkRemainInfoRequest);
+            AjaxResult rep = AjaxResult.success(infoList);
+            return rep;
+        } catch (Exception e) {
+            e.printStackTrace();
+            AjaxResult rep = AjaxResult.error("失败");
+            return rep;
+        }
+
+    }
+
+
+    @ApiOperation(value = "查询过车记录", httpMethod = "POST", response = String.class, produces = "application/json")
+    @RequestMapping(value = "/getCrossRecordsInfo", method = RequestMethod.POST, produces = "application/json")
+    public AjaxResult getCrossRecordsInfo( @RequestBody @Validated PmsCrossRecordsListRequest pmsCrossRecordsListRequest ) {
+
+        try {
+            PageData<PmsCrossRecordsInfo> infoList = pmsParkService.getPmsCrossRecordslist(pmsCrossRecordsListRequest);
+            AjaxResult rep = AjaxResult.success(infoList);
             return rep;
         } catch (Exception e) {
             e.printStackTrace();
