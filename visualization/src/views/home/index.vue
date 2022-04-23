@@ -26,15 +26,15 @@ export default {
   },
   created () {
     this.componentList = computeLayout(homeLayout);
-    console.log(`====`, this.componentList)
+    // console.log(`====`, this.componentList)
   }
 }
 </script>
 
 <style lang="less" scoped>
   .views-home {
-    background-image: url('./bg.png');
-    background-size: contain;
+    background-image: url('./bg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .component-item {

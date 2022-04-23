@@ -15,7 +15,7 @@
       </div>
       <div class="right">
         <div class="overload">
-          <div class="img">{{ ~~((overview.used * 100) / overview.total) }}%</div>
+          <div class="img">{{ ~~((overview.used * 100) / (overview.total || 1)) }}%</div>
           <div class="label">停车压力</div>
         </div>
         <div class="hour">
@@ -41,10 +41,10 @@ export default {
   data() {
     return {
       overview: {
-        overage: 100, // 剩余
-        total: 200, // 总共
-        used: 100, // 已用
-        overload: 80, // 压力
+        overage: 0, // 剩余
+        total: 0, // 总共
+        used: 0, // 已用
+        overload: 0, // 压力
         peakHours: [], // 高峰时段
       },
       overloadImg,
@@ -78,17 +78,21 @@ export default {
   },
   methods: {
     async fetchData() {
-      const { overage, total, used, parkingTrend, peakHours } = await getParking();
-      this.overview = {
-        overage,
-        used,
-        total,
-        peakHours
-      }
-      this.list[0].value = overage;
-      this.list[1].value = total;
-      this.list[2].value = used;
+      // const { overage, total, used, parkingTrend, peakHours } = await getParking();
+      const { overview, parkingTrend } = await getParking();
+      console.log({ overview, parkingTrend })
+      this.overview = overview;
       this.parkingTrend = parkingTrend;
+      // this.overview = {
+      //   overage,
+      //   used,
+      //   total,
+      //   peakHours
+      // }
+      this.list[0].value = overview.overage;
+      this.list[1].value = overview.total;
+      this.list[2].value = overview.used;
+      // this.parkingTrend = parkingTrend;
     },
     getGuageOptions() {
       const baseFontSize = this.globalGetChartFontSize();

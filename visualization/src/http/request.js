@@ -1,3 +1,4 @@
+import axios from 'axios'
 import http from './index'
 
 /**
@@ -79,21 +80,13 @@ export const getCompany = async () => {
  * 智慧停车
  */
 export const getParking = async () => {
-  const parkingTrend = [];
-  for (let i = 0; i < 24; ++i) {
-    parkingTrend.push({
-      time: i < 10 ? `0${i}` : `${i}`,
-      comeIn: ~~(Math.random() * 100),
-      leave: ~~(Math.random() * 100),
-    })
-  }
-  return Promise.resolve({
-    overage: ~~(Math.random() * 500),
-    total: 1000 + ~~(Math.random() * 1000),
-    used: ~~(Math.random() * 500),
-    peakHours: ~~(Math.random() * 24),
-    parkingTrend
-  })
+  console.log('')
+  const {
+    data: {
+      data
+    }
+  } = await http.post('/screen/smartParking/getCrossRecordsInfo');
+  return Promise.resolve(data)
 }
 
 /**
