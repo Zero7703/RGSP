@@ -6,7 +6,7 @@ export default {
          * 根据页面大小获取基础尺寸
          */
         globalGetChartFontSize () {
-          return 12;
+          return 8;
         }
       }
     })

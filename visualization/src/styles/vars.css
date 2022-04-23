@@ -6,9 +6,11 @@
   /* 大号文本 */
   --font-size-large: 50.2px;
   /* 中号文本 */
-  --font-size-medium: 1.2rem;
+  --font-size-medium: 48px;
   /* 正常文本 */
   --font-size-nromal: 28px;
+  /* 小一号 */
+  --font-size-small: 28px;
 
   --color-font: white;
 
@@ -28,6 +30,6 @@
   --color-card-title: white;
 
   /* 卡片标题高度 */
-  --height-card-title: 2.5rem;
+  --height-card-title: 87px;
 
 }

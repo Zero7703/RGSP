@@ -13,3 +13,6 @@ export default {
 }
 </script>
 
+<style lang="less">
+@import "./font/font.css";
+</style>

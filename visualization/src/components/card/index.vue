@@ -31,6 +31,12 @@ export default {
       font-size: var(--font-size-card-title);
       color: var(--color-card-title);
       height: var(--height-card-title);
+      background-image: url('./title-bg.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: 0;
+      line-height: var(--height-card-title);
+      padding-left: var(--font-size-card-title);
     }
     .content {
       height: calc(100% - var(--height-card-title));

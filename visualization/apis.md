@@ -51,25 +51,27 @@
   }],  // 行业统计
   fundsCount: [{
     label: '100万',
-    value: 22
+    value: 26
   }, {
     label: '300万',
-    value: 22
+    value: 18
   }, {
     label: '500万',
-    value: 22
+    value: 19
   }, {
     label: '1000万',
-    value: 22
+    value: 10
   }, {
     label: '2000万',
-    value: 22
+    value: 9
   }, {
     label: '6000万',
-    value: 22
+    value: 5
   }]  // 资金分布
 }
 ```
+
+> 资金分布 必须返回6条纪录
 
 ### 4. 智慧停车
 
@@ -84,15 +86,18 @@
   },
   parkingTrend: [{
     time: '00',
-    value: 10
+    comeIn: 10,
+    leave: 10,
   }, {
     time: '01',
-    value: 20
+    comeIn: 10,
+    leave: 10
   }, 
     ...
   {
     time: '24',
-    value: 33
+    comeIn: 10,
+    leave: 10
   }] // 趋势以小时为单位，共24个
 }
 ```

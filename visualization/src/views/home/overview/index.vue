@@ -26,6 +26,7 @@
 import areaImg from './area.png';
 import operaImg from './yunying.png';
 import staffImg from './staff.png';
+import { getOverview } from '@/http/request';
 
 export default {
   data () {
@@ -50,6 +51,18 @@ export default {
         img: staffImg
       }],
     }
+  },
+  methods: {
+    async fetchData () {
+      const { area, duration, staffNums } = await getOverview();
+      this.list[0].value = area;
+      this.list[1].value = duration;
+      this.list[2].value = staffNums;
+      this.list = [...this.list];
+    }
+  },
+  mounted () {
+    this.fetchData();
   }
 }
 </script>
@@ -65,16 +78,16 @@ export default {
       text-align: center;
       width: 30%;
       .img {
-        height: 50%;
+        height: 40%;
+        padding: 10%;
         img {
-          width: 100%;
-          height: 100%;
+          // width: 100%;
+          // height: 100%;
           max-width: 100%;
           max-height: 100%;
         }
       }
       .count {
-        font-size: 50.2px;
         font-size: var(--font-size-large);
         color: var(--color-highlight);
       }
