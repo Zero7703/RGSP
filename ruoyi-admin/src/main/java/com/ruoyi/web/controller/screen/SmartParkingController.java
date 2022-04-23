@@ -27,9 +27,26 @@ public class SmartParkingController
 
 
 
-    @ApiOperation(value = "查询过车记录", httpMethod = "POST", response = String.class, produces = "application/json")
+    @ApiOperation(value = "查询智慧停车大屏信息", httpMethod = "POST", response = String.class, produces = "application/json")
+    @RequestMapping(value = "/getSmartParkingInfo", method = RequestMethod.POST, produces = "application/json")
+    public AjaxResult getSmartParkingInfo( ) {
+
+        try {
+            Map<String,Object> result = smartParkingService.newPage();
+            AjaxResult rep = AjaxResult.success(result);
+            return rep;
+        } catch (Exception e) {
+            e.printStackTrace();
+            AjaxResult rep = AjaxResult.error("失败");
+            return rep;
+        }
+
+    }
+
+
+    @ApiOperation(value = "查询智慧停车大屏信息", httpMethod = "POST", response = String.class, produces = "application/json")
     @RequestMapping(value = "/getCrossRecordsInfo", method = RequestMethod.POST, produces = "application/json")
-    public AjaxResult getCrossRecordsInfo( ) {
+    public AjaxResult newPage( ) {
 
         try {
             Map<String,Object> result = smartParkingService.getSmartParkingData();
