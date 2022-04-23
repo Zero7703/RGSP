@@ -21,7 +21,7 @@ public class RunnerConfig {
    */
   private static String protocol;
 
-  @Value("${hikvison.iot.host:127.0.0.1:8443}")
+  @Value("${hikvison.iot.host:117.86.0.219:56000}")
   private  void setHost( String host ) {
     ArtemisConfig.host = host;
     Constants.DEFAULT_TIMEOUT = 10000;
@@ -36,11 +36,11 @@ public class RunnerConfig {
     Constants.DEFAULT_TIMEOUT = minSeconds;
   }
 
-  @Value("${hikvison.iot.appKey:123456}")
+  @Value("${hikvison.iot.appKey:29188646}")
   private  void setAppKey( String appKey ) {
     ArtemisConfig.appKey = appKey;
   }
-  @Value("${hikvison.iot.appSecret:123456}")
+  @Value("${hikvison.iot.appSecret:yPMZg7PMNhOcIQsHDTdl}")
   private  void setAppSecret( String appSecret ) {
     ArtemisConfig.appSecret = appSecret;
   }

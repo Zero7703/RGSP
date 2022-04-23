@@ -13,8 +13,7 @@ import lombok.Setter;
  * @date 2022/4/20 21:20
  */
 @ApiModel(value = "车位剩余信息查询",description = "描述")
-@Getter
-@Setter
+
 public class ParkRemainInfoRequest {
 
     @ApiModelProperty(value="停车库唯一识别码")
@@ -30,4 +29,12 @@ public class ParkRemainInfoRequest {
         return URI;
     }
 
+
+    public String getParkSyscode() {
+        return parkSyscode;
+    }
+
+    public void setParkSyscode(String parkSyscode) {
+        this.parkSyscode = parkSyscode;
+    }
 }

@@ -10,9 +10,6 @@ import lombok.ToString;
  * @author Harry
  * @date 2022/4/20 21:46
  */
-@Getter
-@Setter
-@ToString
 public class PmsParkRemainInfo {
 
     /**
@@ -60,4 +57,75 @@ public class PmsParkRemainInfo {
      */
     private int leftReservePlace;
 
+    public String getParkSyscode() {
+        return parkSyscode;
+    }
+
+    public void setParkSyscode(String parkSyscode) {
+        this.parkSyscode = parkSyscode;
+    }
+
+    public String getParkName() {
+        return parkName;
+    }
+
+    public void setParkName(String parkName) {
+        this.parkName = parkName;
+    }
+
+    public String getParentParkSyscode() {
+        return parentParkSyscode;
+    }
+
+    public void setParentParkSyscode(String parentParkSyscode) {
+        this.parentParkSyscode = parentParkSyscode;
+    }
+
+    public int getTotalPlace() {
+        return totalPlace;
+    }
+
+    public void setTotalPlace(int totalPlace) {
+        this.totalPlace = totalPlace;
+    }
+
+    public int getTotalPermPlace() {
+        return totalPermPlace;
+    }
+
+    public void setTotalPermPlace(int totalPermPlace) {
+        this.totalPermPlace = totalPermPlace;
+    }
+
+    public int getTotalReservePlace() {
+        return totalReservePlace;
+    }
+
+    public void setTotalReservePlace(int totalReservePlace) {
+        this.totalReservePlace = totalReservePlace;
+    }
+
+    public int getLeftPlace() {
+        return leftPlace;
+    }
+
+    public void setLeftPlace(int leftPlace) {
+        this.leftPlace = leftPlace;
+    }
+
+    public int getLeftPermPlace() {
+        return leftPermPlace;
+    }
+
+    public void setLeftPermPlace(int leftPermPlace) {
+        this.leftPermPlace = leftPermPlace;
+    }
+
+    public int getLeftReservePlace() {
+        return leftReservePlace;
+    }
+
+    public void setLeftReservePlace(int leftReservePlace) {
+        this.leftReservePlace = leftReservePlace;
+    }
 }
