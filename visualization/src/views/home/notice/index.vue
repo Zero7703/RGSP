@@ -10,6 +10,19 @@
         </div>
       </div>
     </div>
+    <el-dialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="30%"
+      :append-to-body="false"
+      :modal-append-to-body="false"
+      :before-close="handleClose">
+      <span>这是一段信息</span>
+      <!-- <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span> -->
+    </el-dialog>
   </com-card>
 </template>
 
@@ -19,15 +32,20 @@ import { getNotice } from '@/http/request';
 export default {
   data () {
     return {
+      dialogVisible: false,
       noticeList: [], // 通知列表
     }
   },
   methods: {
+    handleClose () {
+      this.dialogVisible = false;
+    },
     async fetchData () {
       const { noticeList } = await getNotice();
       this.noticeList = noticeList;
     },
     handlerShowDetail (id) {
+      // this.dialogVisible = true;
       console.log(`显示通知 ${id} 的详情信息`)
     }
   },

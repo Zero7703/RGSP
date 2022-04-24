@@ -20,6 +20,8 @@
     font-weight: 400;
     .title {
       height: 90%;
+
+      
       display: flex;
       align-items: center;
       // padding-top: calc(var(--font-size-header) / 3);

@@ -81,7 +81,6 @@ export const getCompany = async () => {
  * http://124.220.176.90:18888/screen/smartParking/getSmartParkingInfo
  */
 export const getParking = async () => {
-  console.log('')
   const {
     data: {
       data
