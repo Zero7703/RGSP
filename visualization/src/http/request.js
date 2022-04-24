@@ -78,6 +78,7 @@ export const getCompany = async () => {
 
 /**
  * 智慧停车
+ * http://124.220.176.90:18888/screen/smartParking/getSmartParkingInfo
  */
 export const getParking = async () => {
   console.log('')
@@ -85,7 +86,7 @@ export const getParking = async () => {
     data: {
       data
     }
-  } = await http.post('/screen/smartParking/getCrossRecordsInfo');
+  } = await http.post('/screen/smartParking/getSmartParkingInfo');
   return Promise.resolve(data)
 }
 
