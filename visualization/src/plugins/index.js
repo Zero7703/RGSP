@@ -8,6 +8,16 @@ export default {
         globalGetChartFontSize () {
           return 8;
         }
+      },
+      mounted () {
+        if (this.fetchData) {
+          this.$timer = setInterval(() => {
+            this.fetchData();
+          }, 10000);
+        }
+      },
+      beforeDestory () {
+        this.$timer && clearInterval(this.$timer);
       }
     })
   }

@@ -13,7 +13,7 @@
         </div>
         <div>
           <span class="count">
-            {{item.value}}
+            <countTo :endVal="item.value"/>
           </span>
         </div>
         <div class="label">{{item.label}}</div>

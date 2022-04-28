@@ -3,15 +3,15 @@
     <div class="card-content">
       <div class="img">
         <div class="item temperatureSensor">
-          <div class="value">{{temperatureSensor}}</div>
+          <div class="value"><countTo :endVal="temperatureSensor"/></div>
           <div class="label">温感</div>
         </div>
         <div class="item monitor">
-          <div class="value">{{monitor}}</div>
+          <div class="value"><countTo :endVal="monitor"/></div>
           <div class="label">监控</div>
         </div>
         <div class="item smokeSensor">
-          <div class="value">{{smokeSensor}}</div>
+          <div class="value"><countTo :endVal="smokeSensor"/></div>
           <div class="label">烟感</div>
         </div>
       </div>

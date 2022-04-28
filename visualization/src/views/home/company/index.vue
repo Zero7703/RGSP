@@ -13,17 +13,13 @@
             <div class="label">
               {{item.label}}
               <span class="num">
-                {{item.value}}
+                <countTo :endVal="item.value"/>
               </span>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- 行业统计(饼图)：{{industryCount}},
-    资金分布: {{fundsCount}} -->
   </com-card>
 </template>
 

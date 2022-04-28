@@ -8,7 +8,8 @@
           </div>
           <div class="content">
             <div class="value">
-              {{energyUsed}}
+              <!-- {{energyUsed}} -->
+              <countTo :endVal="energyUsed"/>
             </div>
             <div class="label">用电量</div>
           </div>
@@ -19,7 +20,8 @@
           </div>
           <div class="content">
             <div class="value">
-              {{waterConsumption}}
+              <!-- {{waterConsumption}} -->
+              <countTo :endVal="waterConsumption"/>
             </div>
             <div class="label">用水量</div>
           </div>
@@ -36,7 +38,9 @@
               }"></div>
             </div>
           </div>
-          <div class="value">{{item.value}}</div>
+          <div class="value">
+            <countTo :endVal="item.value"/>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,9 @@
       <div class="top">
         <div class="img"></div>
         <div class="label">会议室</div>
-        <div class="value">{{ total }}h</div>
+        <div class="value">
+          <countTo :endVal="total"/>h
+        </div>
       </div>
       <div class="bottom" ref="chart"></div>
     </div>

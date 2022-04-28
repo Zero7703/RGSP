@@ -7,7 +7,7 @@
             <div class="img">
               <img :src="item.img" alt="" />
             </div>
-            <div class="value">{{ item.value }}</div>
+            <div class="value"><countTo :endVal="item.value"/></div>
             <div class="label">{{ item.label }}</div>
           </div>
         </div>
@@ -15,7 +15,10 @@
       </div>
       <div class="right">
         <div class="overload">
-          <div class="img">{{ ~~((overview.used * 100) / (overview.total || 1)) }}%</div>
+          <div class="img">
+            <countTo :endVal=" ~~((overview.used * 100) / (overview.total || 1))"/>%
+            <!-- {{ ~~((overview.used * 100) / (overview.total || 1)) }}% -->
+          </div>
           <div class="label">停车压力</div>
         </div>
         <div class="hour">
