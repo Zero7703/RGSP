@@ -129,7 +129,7 @@ export default {
     }
     .label {
       margin: 0 var(--font-size-large);
-      font-size: var(--font-size-medium);
+      font-size: var(--font-size-large);
     }
     .value {
       font-size: var(--font-size-large);

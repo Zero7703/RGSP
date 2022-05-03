@@ -33,7 +33,7 @@ export default {
 
 <style lang="less" scoped>
   .views-home {
-    background-image: url('./bg.jpg');
+    background-image: url('./bg.png');
     background-size: cover;
     background-repeat: no-repeat;
   }

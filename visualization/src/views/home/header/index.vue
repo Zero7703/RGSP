@@ -11,6 +11,7 @@
     background-image: url('./bg.png');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position-x: center;
     display: flex;
     justify-content: center;
     font-size: var(--font-size-header);

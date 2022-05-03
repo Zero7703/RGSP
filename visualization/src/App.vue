@@ -5,20 +5,29 @@
 </template>
 
 <script>
+import { screenSize } from '@/constants';
+
 export default {
   name: 'App',
   data () {
     return {
-      styles: {}
+      size: {
+        width: `${screenSize[0]}px`,
+        height: `${screenSize[1]}px`,
+      },
+      styles: {
+        width: `${screenSize[0]}px`,
+        height: `${screenSize[1]}px`,
+      }
     }
   },
   methods: {
     resize () {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      console.log(`height`, height)
       this.styles = {
-        transform: `scale(${width / 3840})`
+        transform: `scale(${width / screenSize[0]})`,
+        ...this.size
       }
     }
   },

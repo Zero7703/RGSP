@@ -73,16 +73,16 @@ export default {
       }
     }
     .temperatureSensor {
-      top: calc(0px - (var(--font-size-small) * 1.8));
+      top: calc(0px - (var(--font-size-small) * 2.5));
       left:  calc((var(--font-size-small) * 1.5))
     }
     .monitor {
-      bottom: calc((var(--font-size-small) * 4));
+      bottom: calc((var(--font-size-small) * 6  ));
       left: calc(var(--font-size-small));
     }
     .smokeSensor {
       right: var(--font-size-small);
-      bottom: calc((var(--font-size-small) * 5));
+      bottom: calc((var(--font-size-small) * 6));
     }
   }
 </style>

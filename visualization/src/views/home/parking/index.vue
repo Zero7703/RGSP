@@ -395,7 +395,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: var(--font-size-medium);
+        font-size: var(--font-size-large);
       }
       .label {
         padding-top: var(--font-size-small);
