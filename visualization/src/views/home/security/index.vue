@@ -49,7 +49,8 @@ export default {
 
 <style lang="less" scoped>
   .card-content {
-    padding: 20% 10% 10% 10%;
+    padding: 5%;
+    // padding: 10% 10% 10% 10%;
   }
   .img {
     position: relative;
@@ -73,16 +74,16 @@ export default {
       }
     }
     .temperatureSensor {
-      top: calc(0px - (var(--font-size-small) * 2.5));
-      left:  calc((var(--font-size-small) * 1.5))
+      top: calc(0px - (var(--font-size-small)));
+      left:  calc((var(--font-size-small) * 4))
     }
     .monitor {
-      bottom: calc((var(--font-size-small) * 6  ));
-      left: calc(var(--font-size-small));
+      bottom: calc((var(--font-size-small) * 4));
+      left: calc(var(--font-size-small) * 4);
     }
     .smokeSensor {
-      right: var(--font-size-small);
-      bottom: calc((var(--font-size-small) * 6));
+      right: calc(var(--font-size-small) * 4);
+      bottom: calc((var(--font-size-small) * 4));
     }
   }
 </style>

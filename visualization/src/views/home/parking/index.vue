@@ -380,14 +380,14 @@ export default {
     height: 100%;
     width: 30%;
     .overload {
-      height: 50%;
+      height: 60%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
       padding-top: 10%;
       .img {
-        height: 60%;
+        height: 65%;
         width: 100%;
         background-image: url("./overload.png");
         background-position: center;
@@ -406,7 +406,7 @@ export default {
     }
     .hour {
       height: 50%;
-      padding-top: 20%;
+      padding-top: 5%;
       .guage {
         height: 60%;
         width: 100%;

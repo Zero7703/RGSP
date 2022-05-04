@@ -23,12 +23,13 @@ export default {
   },
   methods: {
     resize () {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      this.styles = {
-        transform: `scale(${width / screenSize[0]})`,
-        ...this.size
-      }
+      return
+      // const width = window.innerWidth;
+      // const height = window.innerHeight;
+      // this.styles = {
+      //   transform: `scale(${width / screenSize[0]})`,
+      //   ...this.size
+      // }
     }
   },
   mounted () {

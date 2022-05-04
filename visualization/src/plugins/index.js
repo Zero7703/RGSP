@@ -13,7 +13,7 @@ export default {
         if (this.fetchData) {
           this.$timer = setInterval(() => {
             this.fetchData();
-          }, 10000);
+          }, 1000 * 60 * 10);
         }
       },
       beforeDestory () {
