@@ -63,7 +63,7 @@ export default {
         legend: {
           show: true,
           orient: 'vertical',
-          right: '30%',
+          right: '20%',
           type: 'plain',
           top: 'center',
           itemWidth: baseFontSize * 2.8,

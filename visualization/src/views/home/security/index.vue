@@ -54,8 +54,9 @@ export default {
   }
   .img {
     position: relative;
-    height: 100%;
-    width: 100%;
+    margin-top: 10%;
+    height: 90%;
+    width: 90%;
     background-image: url('./img.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -74,16 +75,16 @@ export default {
       }
     }
     .temperatureSensor {
-      top: calc(0px - (var(--font-size-small)));
-      left:  calc((var(--font-size-small) * 4))
+      top: calc(0px - (var(--font-size-small) * 2));
+      left:  calc((var(--font-size-small) * 5))
     }
     .monitor {
-      bottom: calc((var(--font-size-small) * 4));
-      left: calc(var(--font-size-small) * 4);
+      bottom: calc((var(--font-size-small) * 4.5));
+      left: calc(var(--font-size-small) * 1);
     }
     .smokeSensor {
-      right: calc(var(--font-size-small) * 4);
-      bottom: calc((var(--font-size-small) * 4));
+      right: calc(var(--font-size-small) * 1);
+      bottom: calc((var(--font-size-small) * 5));
     }
   }
 </style>

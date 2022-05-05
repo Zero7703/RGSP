@@ -11,6 +11,9 @@
             <div class="label">{{ item.label }}</div>
           </div>
         </div>
+        
+      </div>
+      <div class="center">
         <div class="bottom" ref="chart"></div>
       </div>
       <div class="right">
@@ -104,7 +107,7 @@ export default {
       const value = ((this.overview.peakHours) / 24) * 240;
       const option = {
         grid: {
-          top: 10
+          bottom: 0
         },
         series: [
           {
@@ -339,10 +342,10 @@ export default {
   display: flex;
   .left {
     height: 100%;
-    width: 70%;
+    width: 40%;
     .top {
-      height: 35%;
-      margin-top: 5%;
+      height: 80%;
+      margin-top: 10%;
       display: flex;
       justify-content: space-around;
       .item {
@@ -372,43 +375,45 @@ export default {
         }
       }
     }
+  }
+  .center {
+    width: 40%;
     .bottom {
-      height: 60%;
+      height: 100%;
     }
   }
   .right {
     height: 100%;
-    width: 30%;
+    width: 20%;
     .overload {
-      height: 60%;
+      height: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      padding-top: 10%;
       .img {
-        height: 65%;
+        height: 100%;
         width: 100%;
         background-image: url("./overload.png");
         background-position: center;
         background-repeat: no-repeat;
+        background-size: contain;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: var(--font-size-large);
       }
       .label {
-        padding-top: var(--font-size-small);
         text-align: center;
         font-family: SourceHanSansCN-Bold;
         font-size: var(--font-size-small);
       }
     }
     .hour {
-      height: 50%;
-      padding-top: 5%;
+      margin-top: 5%;
+      height: 45%;
       .guage {
-        height: 60%;
+        height: 70%;
         width: 100%;
       }
       .label {
