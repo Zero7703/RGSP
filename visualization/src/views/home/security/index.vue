@@ -16,9 +16,6 @@
         </div>
       </div>
     </div>
-    <!-- 监控: {{monitor}}
-    烟感: {{smokeSensor}}
-    温感: {{temperatureSensor}} -->
   </com-card>
 </template>
 

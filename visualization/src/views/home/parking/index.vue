@@ -30,8 +30,6 @@
         </div>
       </div>
     </div>
-    <!-- 统计：{{overview}},
-    停车趋势: {{parkingTrend}} -->
   </com-card>
 </template>
 

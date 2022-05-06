@@ -44,10 +44,6 @@
         </div>
       </div>
     </div>
-    <!-- 用电量: {{energyUsed}}
-    用水量: {{waterConsumption}}
-    用电量top: {{energyUsedTop}}
-    用水量Top: {{waterConsumptionTop}} -->
   </com-card>
 </template>
 

@@ -10,8 +10,6 @@
       <div class="right" ref="chart">
       </div>
     </div>
-    <!-- 入驻率：,
-    入驻统计: {{occupancyStatistics}} -->
   </com-card>
 </template>
 

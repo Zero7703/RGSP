@@ -10,8 +10,6 @@
       </div>
       <div class="bottom" ref="chart"></div>
     </div>
-    <!-- 预约时长: {{total}}
-    预约趋势: {{appointmentTrend}} -->
   </com-card>
 </template>
 
